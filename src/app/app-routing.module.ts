@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent } from './shared/widgets/page-not-found/page-not-found.component';
 
 export const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/todos',
+    pathMatch: 'full',
+  },
   {
     path: 'login',
     loadChildren: () =>
@@ -12,6 +18,7 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./modules/todo/todo.module').then((m) => m.TodoModule),
   },
+  { path: '**', component: PageNotFoundComponent },
 ];
 
 @NgModule({

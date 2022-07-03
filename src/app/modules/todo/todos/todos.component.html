@@ -1,1 +1,2 @@
-<app-table [data]="todos" [columns]="columns" (onClickRow)="getRowData($event)"></app-table>
+<app-table [data]="todos" [columns]="columns" (onClickRow)="getRowData($event)" [paginator]="true" [rows]="10"
+  [showCurrentPageReport]="true"></app-table>

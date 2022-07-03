@@ -12,6 +12,9 @@ export class TableComponent implements OnInit {
 
   @Input() data: any;
   @Input() columns!: TableHeader[];
+  @Input() paginator!: boolean;
+  @Input() rows!: number;
+  @Input() showCurrentPageReport!: true;
   @Output() onClickRow: EventEmitter<any> = new EventEmitter();
 
   ngOnInit(): void {}

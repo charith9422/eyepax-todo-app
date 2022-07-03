@@ -10,6 +10,6 @@ export class LoginUiComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
+  } 
 
 }
